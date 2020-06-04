@@ -8,21 +8,11 @@ class UsersController < ApplicationController
   def create
     user = User.new
     if user.save
-      user.all
-      render json: { status: 'SUCCESS', data: post }
+      render json: { status: 'SUCCESS', data: User.all }
     else
-      render json: { status: 'ERROR', data: post.errors }
+      render json: { status: 'ERROR', data: user.errors }
     end
   end
-
-  def edit
-    
-  end
-
-  def update
-    
-  end
-
 end
 
 
