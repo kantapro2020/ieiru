@@ -144,7 +144,7 @@ DEPENDENCIES
   rails (~> 5.2.4, >= 5.2.4.3)
   spring
   spring-watcher-listen (~> 2.0.0)
-  sqlite3
+  sqlite3 (~> 1.4.2)
   tzinfo-data
   unicorn (= 5.4.1)
 
