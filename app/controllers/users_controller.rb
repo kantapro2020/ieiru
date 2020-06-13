@@ -7,20 +7,19 @@ class UsersController < ApplicationController
 
   def create
     user = User.find_by( name: users_params[:name])
-    if user.update(users_params[:latitude, :longitude])
-      render json: { status: 'SUCCESS', data: User.all }
+    if user
+      if user.update(latitude: users_params[:latitude],longitude: users_params[:longitude])
+        render json: { status: 'SUCCESS', data: User.all }
+      else
+        render json: { status: 'ERROR', data: user.errors }
+      end
     else
-      render json: { status: 'ERROR', data: user.errors }
-    end
-
-    unless user
       user = User.new(users_params)
-    end
-
-    if user.save
-      render json: { status: 'SUCCESS', data: User.all }
-    else
-      render json: { status: 'ERROR', data: user.errors }
+      if user.save
+        render json: { status: 'SUCCESS', data: User.all }
+      else
+        render json: { status: 'ERROR', data: user.errors }
+      end
     end
   end
 
@@ -33,15 +32,3 @@ class UsersController < ApplicationController
 end
 
 
-
-
-
-
-
-# def update
-#   if current_user.update(user_params)
-#     redirect_to root_path
-#   else
-#     render :edit
-#   end
-# end
