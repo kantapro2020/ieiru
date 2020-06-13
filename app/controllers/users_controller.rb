@@ -7,7 +7,7 @@ class UsersController < ApplicationController
 
   def create
     user = User.find_by( name: users_params[:name])
-    if user.update(user_params[:latitude, :longitude])
+    if user.update(users_params[:latitude, :longitude])
       render json: { status: 'SUCCESS', data: User.all }
     else
       render json: { status: 'ERROR', data: user.errors }
@@ -29,7 +29,7 @@ class UsersController < ApplicationController
   def users_params
     params.require(:user).permit(:name, :latitude, :longitude)
   end
-  
+
 end
 
 
