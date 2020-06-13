@@ -16,17 +16,11 @@ class UsersController < ApplicationController
     unless user
       user = User.new(users_params)
     end
-    
+
     if user.save
       render json: { status: 'SUCCESS', data: User.all }
     else
       render json: { status: 'ERROR', data: user.errors }
-    end
-  end
-
-  def update
-    
-      
     end
   end
 
@@ -35,6 +29,7 @@ class UsersController < ApplicationController
   def users_params
     params.require(:user).permit(:name, :latitude, :longitude)
   end
+  
 end
 
 
