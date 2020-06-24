@@ -8,7 +8,7 @@ class UsersController < ApplicationController
   def create
     user = User.find_by( name: users_params[:name])
     if user
-      if user.update(latitude: users_params[:latitude], longitude: users_params[:longitude],
+      if user.update_attributes(latitude: users_params[:latitude], longitude: users_params[:longitude],
        is_home: user.ieiru(users_params[:longitude], users_params[:latitude]))
         render json: { status: 'SUCCESS', data: User.all }
       else
