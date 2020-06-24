@@ -64,6 +64,7 @@ GEM
       sshkit (~> 1.3)
     capistrano3-unicorn (0.2.1)
       capistrano (~> 3.1, >= 3.1.0)
+    coderay (1.1.3)
     concurrent-ruby (1.1.6)
     crass (1.0.6)
     erubi (1.9.0)
@@ -97,6 +98,11 @@ GEM
     nio4r (2.5.2)
     nokogiri (1.10.9)
       mini_portile2 (~> 2.4.0)
+    pry (0.13.1)
+      coderay (~> 1.1)
+      method_source (~> 1.0)
+    pry-rails (0.3.9)
+      pry (>= 0.10.4)
     puma (3.12.6)
     rack (2.2.2)
     rack-test (1.1.0)
@@ -169,6 +175,7 @@ DEPENDENCIES
   capistrano3-unicorn
   listen (>= 3.0.5, < 3.2)
   mysql2
+  pry-rails
   puma (~> 3.11)
   rails (~> 5.2.4, >= 5.2.4.3)
   spring
