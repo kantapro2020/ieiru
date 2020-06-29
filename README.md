@@ -1,24 +1,29 @@
-# README
+# Ieiru（API）
+## 概要
+一緒に暮らしている人（家族、友人、恋人）が、今家にいるのかいないのかを判別するアプリ（API）
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## 制作背景
+現在友人3人と共同生活をしており、各々が在宅であるかどうかを知ることが、ストレスフリーな生活を送るために必要であると考え制作しました。
 
-Things you may want to cover:
+## 工夫したポイント
+•スマートフォンの緯度経度と住まいの緯度経度を比較し、在宅かどうかを判断  
+•フォアグランド、バックグランド時の位置情報の取得
 
-* Ruby version
+## 使用技術
+•ruby  
+•ruby on rails  
+•VScode  
+•AWS  
 
-* System dependencies
+## 課題や今後実装したい技術
+実際の私の住まいとデバイスの緯度経度の比較しかできないので、住所登録機能をつけて汎用性を持たせたいと考えております。
 
-* Configuration
+## DB設計
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+### usersテーブル
+|Column|Type|Options|
+|------|----|-------|
+|name|string||
+|longitude|float||
+|latitude|float||
+|is_home|boolean||
