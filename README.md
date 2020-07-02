@@ -1,6 +1,10 @@
 # Ieiru（API）
 ## 概要
 一緒に暮らしている人（家族、友人、恋人）が、今家にいるのかいないのかを判別するアプリ（API）
+web,android,iOSで開発
+リンク：https://github.com/kantapro2020/IeiruForAndroid/blob/master/README.md (Android)
+　　　　https://github.com/kantapro2020/IeiruForiOS/blob/master/README.md (iOS)　
+　　　　https://github.com/kantapro2020/IeiruForWeb/blob/master/README.md (web)
 
 ## 本番環境
 http://18.176.193.22/
